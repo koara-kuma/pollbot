@@ -19,7 +19,7 @@ class PollCommand(commands.Cog):
         if len(emojis) < 2:
             return await ctx.send("Please provide at least two emojis for the poll.")
 
-        embed = discord.Embed(title=f"Survey Created by {ctx.author.mention}", description=question, color=0x00ff00)
+        embed = discord.Embed(title=f"Survey Created by {ctx.author.name}", description=question, color=0x00ff00)
         poll_message = await ctx.send(embed=embed)
 
         for emoji in emojis:
