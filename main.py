@@ -21,11 +21,11 @@ help_command = commands.DefaultHelpCommand(
     no_category = "Help"
 )
 
-client = commands.Bot(command_prefix = '!', help_command = help_command, intents= discord.Intents.all())
+client = commands.Bot(command_prefix = 'wok', help_command = help_command, intents= discord.Intents.all())
 
 @client.event
 async def on_ready():
-    activity = discord.Game(name=f"in {len(client.guilds)} servers", type=1)
+    activity = discord.Game(name=f"in {len(client.guilds)} servers | wokhelp", type=1)
     await client.change_presence(status=discord.Status.idle, activity=activity)
     print(f"We have logged in as {client.user}")
 
